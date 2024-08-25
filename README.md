@@ -26,6 +26,16 @@ Mi aplicación obtuvo las siguientes puntuaciones en Google Lighthouse:
 - **SEO:** 100/100
 - **Accesibilidad:** 95/100
 
+
+<img src="./assets/PageSpeed-Insights.png" alt="Resultados del Test" width="600"/>
+
+## Vista del Proyecto
+
+Aquí puedes ver cómo se ve la interfaz de **Aurix**:
+
+<img src="./assets/aurix.png" alt="Resultados del Test" width="300"/>
+
+
 ## Enlaces
 
 - **[Ver el proyecto en vivo](https://jeanpoolgg.github.io/aurix/)**
