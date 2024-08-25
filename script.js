@@ -42,40 +42,40 @@ actionBtn.addEventListener('click', () => {
   outputText.value = currentMode === 'encrypt' ? encrypt(text) : decrypt(text);
 });
 
+// Función para validar el texto
+const textValidate = (text) => {
+  return /^[a-z]+$/.test(text);
+};
+
 // Función para encriptar el texto
 const encrypt = (text) => {
   if(textValidate(text)){
-    return text.split('').map(char => {
-      if (char.match(/[a-z]/i)) {
-          const code = char.charCodeAt(0);
-          const shift = char.toLowerCase() < 'n' ? 13 : -13;
-          return String.fromCharCode(code + shift);
-      }
-      return char;
-    }).join('');
+    return text
+      .replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
   }else{
-    return 'No se aceptan mayúsculas ni caracteres especiales'
+    return 'No se aceptan mayúsculas ni caracteres especiales';
   }
-}
+};
 
 // Función para desencriptar el texto
 const decrypt = (text) => {
-  return encrypt(text);
-}
-
-const textValidate = (text) => {
-  // Expresión regular para permitir solo letras minúsculas y dígitos
-  const regex = /^[a-z0-9]+$/;
-
-  // Verificar si el texto cumple con la expresión regular
-  const isValid = regex.test(text);
-
-  if(isValid){
-    return true
+  if(textValidate(text)){
+    return text
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
   }else{
-    return false
+    return 'No se aceptan mayúsculas ni caracteres especiales';
   }
-}
+};
+
+
 
 // Evento para copiar el texto resultado y mostrar un pop-up
 document.querySelector('.copyButton').addEventListener('click', function() {
