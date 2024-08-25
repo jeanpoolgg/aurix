@@ -12,7 +12,11 @@
   justify-content: center;
   width: 100%;
   padding: 10px 0;
-  max-height: calc(5vh + 20px);
+  height: 10vh;
+}
+
+.header__image {
+  max-width: 200px;
 }
 
 .footer {
@@ -20,9 +24,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  height: 100%;
+  padding: 10px;
+  align-content: center;
   font-family: "Figtree", sans-serif;
+  height: 10vh ;
+  color: #83818c;
 }
 
 main {
@@ -31,7 +37,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(90vh - 30px);
+  min-height: calc(80vh - 40px);
 }
 
 .container {
@@ -49,7 +55,7 @@ main {
 
 .card__title {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 20px;
   color: #333;
