@@ -1,6 +1,6 @@
 # Aurix - Solución de Encriptación y Desencriptación de Texto
 
-**Aurix** es una solución avanzada de encriptación y desencriptación de texto, desarrollada especialmente para el **Alura Challenge - Encriptador** del programa **ONE G7**, impulsado por **Oracle y Alura**. Combina seguridad robusta con un diseño elegante y eficiente.
+**Aurix** es una solución de encriptación y desencriptación de texto, desarrollada especialmente para el **Alura Challenge - Encriptador** del programa **ONE G7**, impulsado por **Oracle y Alura**. Combina seguridad robusta con un diseño elegante y eficiente.
 
 ## Descripción
 
@@ -24,16 +24,16 @@ Mi aplicación obtuvo las siguientes puntuaciones en Google Lighthouse:
 - **Rendimiento:** 100/100
 - **Prácticas recomendadas:** 100/100
 - **SEO:** 100/100
-- **Accesibilidad:** 95/100
+- **Accesibilidad:** 100/100
 
 
-<img src="./assets/PageSpeed-Insights.png" alt="Resultados del Test" width="600"/>
+<img src="./assets/PageSpeed-Insights.png" alt="Resultados de Google Lighthouse para Aurix" width="600"/>
 
 ## Vista del Proyecto
 
 Aquí puedes ver cómo se ve la interfaz de **Aurix**:
 
-<img src="./assets/aurix.png" alt="Resultados del Test" width="300"/>
+<img src="./assets/aurix.png" alt="Interfaz móvil de Aurix" width="300"/>
 
 
 ## Enlaces
