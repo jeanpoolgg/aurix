@@ -28,7 +28,7 @@
   align-content: center;
   font-family: "Figtree", sans-serif;
   height: 10vh ;
-  color: #83818c;
+  color: #68676d;
 }
 
 main {
@@ -91,7 +91,7 @@ main {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
-  color: #83818c;
+  color: #6c6b70;
   background: transparent;
   position: relative;
   z-index: 1;
@@ -160,7 +160,7 @@ output-text {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-45%);
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
