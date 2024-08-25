@@ -7,33 +7,42 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="container">
-        <div class="card">
-            <h1 class="card__title">Aurix</h1>
-            <div class="tab">
-                <div class="tab__slider"></div>
-                <button class="tab__button active" data-tab="encrypt">Encrypt</button>
-                <button class="tab__button" data-tab="decrypt">Decrypt</button>
-            </div>
-            <div class="input active">
-                <label for="input-text" class="input__title">Text to encrypt</label>
-                <div class="input__group">
-                    <input placeholder="Enter text" type="text" id="input-text">
+    <header class="header">
+        <img class="header__image" src="assets/logo-alura.png" alt="">
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <h1 class="card__title">Aurix</h1>
+                <div class="tab">
+                    <div class="tab__slider"></div>
+                    <button class="tab__button active" data-tab="encrypt">Encrypt</button>
+                    <button class="tab__button" data-tab="decrypt">Decrypt</button>
+                </div>
+                <div class="input active">
+                    <label for="input-text" class="input__title">Text to encrypt</label>
+                    <div class="input__group">
+                        <input placeholder="Enter text" type="text" id="input-text">
+                    </div>
+                </div>
+                <button id="action-button" class="action-button">Encrypt</button>
+                <div class="output">
+                    <label for="output-text">Result</label>
+                    <div class="output__group">
+                        <input type="text" id="output-text" class="output-text" readonly>
+                        <button class="copyButton" aria-label="Copy to clipboard">
+                            <img src="assets/copy-solid.svg" alt="Icon of copy to clipboard" class="copyButton__icon">
+                        </button>
+                        <span class="copyButton__feedback">Text Copied!</span>
+                    </div>                
                 </div>
             </div>
-            <button id="action-button" class="action-button">Encrypt</button>
-            <div class="output">
-                <label for="output-text">Result</label>
-                <div class="output__group">
-                    <input type="text" id="output-text" class="output-text" readonly>
-                    <button class="copyButton" aria-label="Copy to clipboard">
-                        <img src="assets/copy-solid.svg" alt="Icon of copy to clipboard" class="copyButton__icon">
-                    </button>
-                    <span class="copyButton__feedback">Text Copied!</span>
-                </div>                
-            </div>
         </div>
+        
     </main>
+    <footer class="footer">
+        <p>&copy; 2024 Aurix. | Designed and developed by Jean Pool Gutierrez Gutierrez</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

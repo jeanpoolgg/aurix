@@ -1,11 +1,37 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  max-height: calc(5vh + 20px);
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  font-family: "Figtree", sans-serif;
+}
+
+main {
+  font-family: "Figtree", sans-serif;
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(90vh - 30px);
 }
 
 .container {
