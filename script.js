@@ -22,6 +22,9 @@ buttons.forEach(button => {
     this.classList.add('active');
     currentMode = this.dataset.tab;
     titleInput.innerHTML = `Text to ${currentMode}`;
+    inputText.value = "";
+    outputText.value = "";
+
     actionBtn.textContent = currentMode.charAt(0).toUpperCase() + currentMode.slice(1);
 
     // Mover el slider
@@ -41,14 +44,18 @@ actionBtn.addEventListener('click', () => {
 
 // Función para encriptar el texto
 const encrypt = (text) => {
-  return text.split('').map(char => {
-    if (char.match(/[a-z]/i)) {
-        const code = char.charCodeAt(0);
-        const shift = char.toLowerCase() < 'n' ? 11 : -11;
-        return String.fromCharCode(code + shift);
-    }
-    return char;
-  }).join('');
+  if(textValidate(text)){
+    return text.split('').map(char => {
+      if (char.match(/[a-z]/i)) {
+          const code = char.charCodeAt(0);
+          const shift = char.toLowerCase() < 'n' ? 13 : -13;
+          return String.fromCharCode(code + shift);
+      }
+      return char;
+    }).join('');
+  }else{
+    return 'No se aceptan mayúsculas ni caracteres especiales'
+  }
 }
 
 // Función para desencriptar el texto
@@ -56,12 +63,25 @@ const decrypt = (text) => {
   return encrypt(text);
 }
 
+const textValidate = (text) => {
+  // Expresión regular para permitir solo letras minúsculas y dígitos
+  const regex = /^[a-z0-9]+$/;
+
+  // Verificar si el texto cumple con la expresión regular
+  const isValid = regex.test(text);
+
+  if(isValid){
+    return true
+  }else{
+    return false
+  }
+}
+
 // Evento para copiar el texto resultado y mostrar un pop-up
 document.querySelector('.copyButton').addEventListener('click', function() {
   // Selecciona el texto del input
   let copyText = document.getElementById('output-text');
   copyText.select();
-  copyText.setSelectionRange(0, 99999); // Para dispositivos móviles
 
   // Copia el texto al portapapeles
   document.execCommand('copy');
