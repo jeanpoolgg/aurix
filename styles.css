@@ -35,7 +35,7 @@ body {
   border-radius: 8px;
   padding: 5px;
   position: relative;
-  width: 100%; /* Ajusta según tu diseño */
+  width: calc(100% - 10px); /* Ajusta según tu diseño */
   margin-bottom: 40px;
 }
 
@@ -54,7 +54,7 @@ body {
 
 .tab__button {
   flex: 1;
-  padding: 8px;
+  padding: 8px 0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -93,6 +93,10 @@ input[type="text"] {
   padding: 10px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+output-text {
+  width: calc(100% - 60px);
 }
 
 .action-button {
