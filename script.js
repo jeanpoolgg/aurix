@@ -56,6 +56,8 @@ const encrypt = (text) => {
       .replace(/a/g, "ai")
       .replace(/o/g, "ober")
       .replace(/u/g, "ufat");
+  }else if(text === ''){
+    return 'Debe ingresar un texto';
   }else{
     return 'No se aceptan mayúsculas ni caracteres especiales';
   }

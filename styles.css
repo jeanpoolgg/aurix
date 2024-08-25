@@ -158,13 +158,21 @@ output-text {
 
 .copyButton {
   position: absolute;
-  right: 10px;
+  right: 0px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
-  border: none;
+  border: 1px solid #ccc;
   cursor: pointer;
-  padding: 0;
+  padding: 7.5px 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.copyButton::selection {
+  border: 1px solid #000;
 }
 
 .copyButton__icon {
