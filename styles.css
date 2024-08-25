@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tab {
+  display: flex;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 5px;
+  position: relative;
+  width: 100%; /* Ajusta según tu diseño */
+  margin-bottom: 40px;
+}
+
+.tab__slider {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  width: calc(50% - 10px); /* Ajusta el ancho del slider */
+  background-color: white;
+  border-radius: 8px;
+  z-index: 0;
+  transition: left 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab__button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #83818c;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.tab__button.active {
+  color: #000;
+}
+
+.input {
+  display: none;
+}
+
+.input.active {
+  display: block;
+}
+
+.input__group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.action-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  margin-top: 20px;
+}
+
+.output__group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.copyButton {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-45%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.copyButton__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.copyButton:focus {
+  outline: none;
+}
+
+.copyButton__feedback {
+  margin-left: 10px;
+  background: none;
+  cursor: pointer;
+
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  font-size: 12px;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.copyButton__feedback.show {
+  visibility: visible;
+  opacity: 1;
+}

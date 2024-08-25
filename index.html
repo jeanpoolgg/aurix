@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurix - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <h1 class="card__title">Aurix</h1>
+            <div class="tab">
+                <div class="tab__slider"></div>
+                <button class="tab__button active" data-tab="encrypt">Encrypt</button>
+                <button class="tab__button" data-tab="decrypt">Decrypt</button>
+            </div>
+            <div class="input active">
+                <label for="input-text" >Text to Encrypt</label>
+                <div class="input__group">
+                    <input placeholder="Enter text to encrypt" type="text" id="input-text">
+                </div>
+                <button class="action-button">Encrypt</button>
+            </div>
+            <div class="output">
+                <label for="output-text">Result</label>
+                <div class="output__group">
+                    <input type="text" id="output-text" readonly>
+                    <button class="copyButton" aria-label="Copy to clipboard">
+                        <img src="assets/copy-solid.svg" alt="Icon of copy to clipboard" class="copyButton__icon">
+                    </button>
+                    <span class="copyButton__feedback">Text Copied!</span>
+                </div>                
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
